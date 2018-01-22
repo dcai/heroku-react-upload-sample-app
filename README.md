@@ -1,4 +1,1 @@
-React + Redux starter kit
-=========================
-
-Boilerplate code to setup react+redux with webpack & express.
+react app to process file uploading

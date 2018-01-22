@@ -10,6 +10,8 @@ var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');
 var testRoute = require('./routes/test');
 var indexRoute = require('./routes/index');
+var multer = require('multer');
+var upload = multer({dest: 'files/'});
 
 var isDev = process.env.NODE_ENV !== 'production';
 
@@ -90,6 +92,9 @@ app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
+});
+
+app.put('/files', upload.array('files'), function (req, res, next) {
 });
 
 // error handling middleware must have 4 arguments
