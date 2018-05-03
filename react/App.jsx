@@ -20,7 +20,6 @@ class App extends Component {
   renderFilerop() {
     const url = "https://httpbin.org/post";
     const fileInputProperties = {
-      capture: "camera",
       style: { display: "block" }
     };
     return (
@@ -42,21 +41,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div>
-          <FileUploadButton
-            label="Capture Image"
-            capture="camera"
-            accept="image/*"
-          />
-        </div>
-        <div>
-          <FileUploadButton
-            label="Capture Video"
-            capture="camcorder"
-            accept="video/*"
-          />
-        </div>
-
         {this.renderFilerop()}
       </div>
     );
