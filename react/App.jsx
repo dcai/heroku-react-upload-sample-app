@@ -12,6 +12,7 @@ const FileUploadButton = props => (
   </div>
 );
 
+const acceptAttr = ".BMP,.DOC,.DOCM,.DOCX,.DOT,.DOTM,.DOTX,.GIF,.HTM,.HTML,.JPEG,.JPG,.MSG,.PDF,.PNG,.RTF,.TIF,.TIFF,.TXT,.WPD,.XPS";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ class App extends Component {
       style: { display: "block" }
     };
     return (
-      <Filerop url={url} accept="image/*" inputProps={fileInputProperties}>
+      <Filerop url={url} accept={acceptAttr} inputProps={fileInputProperties}>
         {status => {
           const { isDragActive, isDragReject } = status;
           if (isDragReject) {
@@ -42,10 +43,11 @@ class App extends Component {
     return (
       <div>
        {this.renderFilerop()}
+       <hr/>
        <div>
          Plain file input element: <input type="file" />
          <hr/>
-         File upload element with filter: <input type="file" accept=".BMP,.DOC,.DOCM,.DOCX,.DOT,.DOTM,.DOTX,.GIF,.HTM,.HTML,.JPEG,.JPG,.MSG,.PDF,.PNG,.RTF,.TIF,.TIFF,.TXT,.WPD,.XPS" />
+         File upload element with filter: <input type="file" accept={acceptAttr} />
        </div>
       </div>
     );
