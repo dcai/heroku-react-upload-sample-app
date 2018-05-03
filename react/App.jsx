@@ -41,12 +41,12 @@ class App extends Component {
   render() {
     return (
       <div>
-         <div>
-             <input type="file" />
-             <hr/>
-             <input type="file" accept="image/*" />
-         </div>
-        {this.renderFilerop()}
+       {this.renderFilerop()}
+       <div>
+         Plain file input element: <input type="file" />
+         <hr/>
+         File upload element with filter: <input type="file" accept=".BMP,.DOC,.DOCM,.DOCX,.DOT,.DOTM,.DOTX,.GIF,.HTM,.HTML,.JPEG,.JPG,.MSG,.PDF,.PNG,.RTF,.TIF,.TIFF,.TXT,.WPD,.XPS" />
+       </div>
       </div>
     );
   }
