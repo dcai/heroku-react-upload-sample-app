@@ -41,6 +41,11 @@ class App extends Component {
   render() {
     return (
       <div>
+         <div>
+             <input type="file" />
+             <hr/>
+             <input type="file" accept="image/*" />
+         </div>
         {this.renderFilerop()}
       </div>
     );
